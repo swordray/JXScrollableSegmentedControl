@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'JXScrollableSegmentedControl_Example' do
+  pod 'JXScrollableSegmentedControl', :path => '../'
+
+  target 'JXScrollableSegmentedControl_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
