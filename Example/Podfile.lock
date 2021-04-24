@@ -1,0 +1,16 @@
+PODS:
+  - JXScrollableSegmentedControl (0.1.0)
+
+DEPENDENCIES:
+  - JXScrollableSegmentedControl (from `../`)
+
+EXTERNAL SOURCES:
+  JXScrollableSegmentedControl:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  JXScrollableSegmentedControl: ae1c573c67dbf7bec5bbb093527291de77b24eba
+
+PODFILE CHECKSUM: ba36651d4124a3edd7da9d5fbc45677de355b353
+
+COCOAPODS: 1.10.1
