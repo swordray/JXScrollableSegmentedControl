@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'JXScrollableSegmentedControl'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'An iOS UISegmentedControl replacement with scrollable, unlimited segments.'
 
 # This description is used to generate tags and improve search results.
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 An iOS UISegmentedControl replacement with scrollable, unlimited segments. iOS 13+ and Swift 5 required.
                        DESC
 
-  s.homepage         = 'https://github.com/swordray/JXScrollableSegmentedControl'
+  s.homepage         = 'https://bailushuyuan.org'
   s.screenshots      = 'https://raw.githubusercontent.com/swordray/JXScrollableSegmentedControl/master/screenshot.png'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'swordray' => 'swordray@gmail.com' }

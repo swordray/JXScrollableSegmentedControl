@@ -1,5 +1,5 @@
 PODS:
-  - JXScrollableSegmentedControl (0.1.0)
+  - JXScrollableSegmentedControl (0.1.1)
 
 DEPENDENCIES:
   - JXScrollableSegmentedControl (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  JXScrollableSegmentedControl: ae1c573c67dbf7bec5bbb093527291de77b24eba
+  JXScrollableSegmentedControl: ad317e41996a988e607fdcc470dec115f4ba4291
 
 PODFILE CHECKSUM: ba36651d4124a3edd7da9d5fbc45677de355b353
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.2
