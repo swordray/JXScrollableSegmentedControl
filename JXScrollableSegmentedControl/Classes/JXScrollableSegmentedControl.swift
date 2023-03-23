@@ -11,6 +11,7 @@ import UIKit
 open class JXScrollableSegmentedControl: UISegmentedControl {
 
     private var selectedSegmentIndexValue = noSegment
+    private var scrollView: UIScrollView!
     private var stackView: UIStackView!
 
     override public init(frame: CGRect) {
@@ -48,7 +49,7 @@ open class JXScrollableSegmentedControl: UISegmentedControl {
         backgroundView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         backgroundView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
 
-        let scrollView = UIScrollView()
+        scrollView = UIScrollView()
         scrollView.alwaysBounceHorizontal = true
         scrollView.backgroundColor = .tertiarySystemFill
         scrollView.showsHorizontalScrollIndicator = false
@@ -136,8 +137,21 @@ open class JXScrollableSegmentedControl: UISegmentedControl {
             selectedSegmentIndexValue = value
 
             for (segment, button) in stackView.arrangedSubviews.compactMap({ $0 as? JXScrollableSegmentedControlButton }).enumerated() {
-                button.isSelected = segment == selectedSegmentIndex
+                let isSelected = segment == selectedSegmentIndex
+                button.isSelected = isSelected
                 button.separatorView.isHidden = [0, selectedSegmentIndex, selectedSegmentIndex + 1].contains(segment)
+                
+                if (isSelected) {
+                    // Ensure contentSize.height is > 0
+                    var contentSize = scrollView.contentSize
+                    contentSize.height = scrollView.bounds.size.height
+                    scrollView.contentSize = contentSize
+                    
+                    var frame = button.frame
+                    frame.origin.x -= 2
+                    frame.size.width += 4
+                    scrollView.scrollRectToVisible(frame, animated: true)
+                }
             }
 
             sendActions(for: .valueChanged)
