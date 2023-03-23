@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'JXScrollableSegmentedControl'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'An iOS UISegmentedControl replacement with scrollable, unlimited segments.'
 
 # This description is used to generate tags and improve search results.
